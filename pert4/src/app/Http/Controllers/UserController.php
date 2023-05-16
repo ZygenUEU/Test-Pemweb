@@ -154,6 +154,12 @@ class UserController extends Controller
                     return redirect()->route('transfer')->with('fail', 'Transfer Gagal, Saldo minimal 1000');
                 }
                 else{
+
+                    $user = User::find(Auth::id());
+                    if((float)$request->value > $user->virtual_cash){
+                        return redirect()->route('transfer')->with('fail', 'Transfer Gagal, Saldo Tidak Mencukupi');
+                    }
+                    
                     //Mengirim data virtual cash ke spesifik user
                     $user = User::where('account_number', $request->account_number)->first();
 
