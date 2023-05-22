@@ -166,6 +166,26 @@ class PermissionsTableSeeder extends Seeder
                 'id'    => 39,
                 'title' => 'anime_access',
             ],
+            [
+                'id'    => 40,
+                'title' => 'food_create',
+            ],
+            [
+                'id'    => 41,
+                'title' => 'food_edit',
+            ],
+            [
+                'id'    => 42,
+                'title' => 'food_show',
+            ],
+            [
+                'id'    => 43,
+                'title' => 'food_delete',
+            ],
+            [
+                'id'    => 44,
+                'title' => 'food_access',
+            ],
         ];
 
         Permission::insert($permissions);

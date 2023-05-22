@@ -29,6 +29,10 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('books/destroy', 'BookController@massDestroy')->name('books.massDestroy');
     Route::resource('books', 'BookController');
 
+    // Food
+    Route::delete('foods/destroy', 'FoodController@massDestroy')->name('foods.massDestroy');
+    Route::resource('foods', 'FoodController');
+
     // Game
     Route::delete('games/destroy', 'GameController@massDestroy')->name('games.massDestroy');
     Route::resource('games', 'GameController');

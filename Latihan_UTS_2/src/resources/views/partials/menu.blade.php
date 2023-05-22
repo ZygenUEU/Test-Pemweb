@@ -76,6 +76,16 @@
                             </a>
                         </li>
                     @endcan
+                    @can('food_access')
+                        <li class="c-sidebar-nav-item">
+                            <a href="{{ route("admin.foods.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/foods") || request()->is("admin/foods/*") ? "c-active" : "" }}">
+                                <i class="fa-fw fas fa-book c-sidebar-nav-icon">
+
+                                </i>
+                                {{ trans('cruds.food.title') }}
+                            </a>
+                        </li>
+                    @endcan
                     @can('game_access')
                         <li class="c-sidebar-nav-item">
                             <a href="{{ route("admin.games.index") }}" class="c-sidebar-nav-link {{ request()->is("admin/games") || request()->is("admin/games/*") ? "c-active" : "" }}">

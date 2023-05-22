@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Anime extends Model
+class Food extends Model
 {
     use SoftDeletes, HasFactory;
 
-    public $table = 'animes';
+    public $table = 'foods';
 
     protected $dates = [
         'created_at',
@@ -20,11 +20,10 @@ class Anime extends Model
     ];
 
     protected $fillable = [
-        'animename',
-        'studio',
-        'episode',
-        'aired',
-        'duration',
+        'foodname',
+        'product',
+        'price',
+        'expired',
         'created_at',
         'updated_at',
         'deleted_at',
