@@ -11,7 +11,7 @@
         </div>
     @endcan
 
-    @can('database_access')
+    {{-- @can('database_access')
         <div class="card">
             <div class="card-header">
                 {{ trans('cruds.pcgame.title_singular') }} {{ trans('global.list') }}
@@ -123,7 +123,7 @@
                 </table>
             </div>
         </div>
-    @endcan
+    @endcan --}}
 
     <div class="form-group mt-5">
         <input type="text" id="searchInput" class="form-control" placeholder="Search..">
