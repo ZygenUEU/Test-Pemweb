@@ -11,7 +11,7 @@
         </div>
     @endcan
 
-    @can('database_access')
+    {{-- @can('database_access')
         <div class="card">
             <div class="card-header">
                 {{ trans('cruds.mobilegame.title_singular') }} {{ trans('global.list') }}
@@ -123,10 +123,10 @@
                 </table>
             </div>
         </div>
-    @endcan
+    @endcan --}}
 
     <div class="form-group mt-5">
-        <input type="text" id="searchInput" class="form-control" placeholder="Search..">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search.."  style="background-color: #1b1b1b;">
     </div>
 
     <div class="form-check text-white">
@@ -151,7 +151,7 @@
 
     <div class="card-columns mt-5">
         @foreach ($mobilegames as $mobilegame)
-            <div class="card card-item text-white border-0" data-card-id="{{ $mobilegame->id }}">
+            <div class="card card-item text-white border-0" data-card-id="{{ $mobilegame->id }}"  style="background-color: #202020;">
                 <img src="{{ $mobilegame->thumbnail_url }}" class="card-img-top" alt="{{ $mobilegame->gamename }}">
 
                 <p class="card-post mt-2 ml-3 mr-3" style="color:gray">Posted By: {{ $mobilegame->postedby }}</p>

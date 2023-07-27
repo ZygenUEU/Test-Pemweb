@@ -32,7 +32,7 @@
 <body class="c-app">
     @include('partials.menu')
     <div class="c-wrapper">
-        <header class="c-header c-header-fixed px-3">
+        <header class="c-header c-header-fixed px-3 text-white border-0" style="background-color: #1b1b1b;">
             <button class="c-header-toggler c-class-toggler d-lg-none mfe-auto" type="button" data-target="#sidebar"
                 data-class="c-sidebar-show">
                 <i class="fas fa-fw fa-bars"></i>
@@ -68,7 +68,7 @@
         </header>
 
         <div class="c-body">
-            <main class="c-main">
+            <main class="c-main" style="background-color: #282929;">
 
 
                 <div class="container-fluid">

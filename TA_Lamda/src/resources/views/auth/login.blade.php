@@ -20,12 +20,17 @@
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text" style="font-size: 10px;">
+                            <span class="text-white border-0 input-group-text" style="
+                            background-color: #2b2b2b;
+                            font-size: 10px;
+                            border-right: 4px solid rgb(69, 69, 69) !important;">
+                                
                                 <i class="fa fa-duotone fa-envelope"></i>
+                            
                             </span>
                         </div>
 
-                        <input id="email" name="email" type="text" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autocomplete="email" autofocus placeholder="{{ trans('global.login_email') }}" value="{{ old('email', null) }}">
+                        <input id="email" name="email" type="text" class="text-white border-0 form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" required autocomplete="email" autofocus placeholder="{{ trans('global.login_email') }}" value="{{ old('email', null) }}" style="background-color: #2b2b2b; !important">
 
                         @if($errors->has('email'))
                             <div class="invalid-feedback">
@@ -36,10 +41,16 @@
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                            <span class="text-white border-0 input-group-text" style="
+                            background-color: #2b2b2b;
+                            border-right: 4px solid rgb(69, 69, 69) !important;">
+                            
+                            <i class="fa fa-lock"></i>
+                        
+                            </span>
                         </div>
 
-                        <input id="password" name="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required placeholder="{{ trans('global.login_password') }}">
+                        <input id="password" name="password" type="password" class="text-white border-0 form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" required placeholder="{{ trans('global.login_password') }}" style="background-color: #2b2b2b; !important">
 
                         @if($errors->has('password'))
                             <div class="invalid-feedback">
@@ -72,13 +83,13 @@
 
                     
 
-                    <button type="submit" class="btn border-0 mt-2"  style="width: 100%; background-color: #7f8389; color: black;">
+                    <button type="submit" class="text-white btn border-0 mt-2"  style="width: 100%; background-color: #7f8389; color: black;">
                         {{ trans('global.login') }}
                     </button>
 
                     <p class="mt-2">Don't have an account? <a href="{{ route('register') }}" class="btn-link-style">Sign Up</a></p>
                     
-                    <hr>
+                    <hr style="width: 100%; border-color: #7f8389;">
 
                     <button type="button" class="btn btn-outline-secondary mt-2" style="width: 100%; border-color: #7f8389;" onclick="fillGuestCredentials()">
                         Continue As Guest

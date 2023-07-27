@@ -97,14 +97,16 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">
+                                    <span class="text-white border-0 input-group-text" style="
+                                    background-color: #2b2b2b;
+                                    border-right: 4px solid rgb(69, 69, 69) !important;">
                                         <i class="fa fa-solid fa-user"></i>
                                     </span>
                                 </div>
 
                                 <input id="name" name="name" type="text"
-                                    class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" required
-                                    autocomplete="name" autofocus placeholder="Name" value="{{ old('name', null) }}">
+                                    class="text-white border-0 form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" required
+                                    autocomplete="name" autofocus placeholder="Name" value="{{ old('name', null) }}" style="background-color: #2b2b2b;">
 
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -115,12 +117,17 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" style="font-size: 10px;"><i class="fa fa-duotone fa-envelope"></i></span>
+                                    <span class="text-white border-0 input-group-text" style="
+                                    background-color: #2b2b2b;
+                                    font-size: 10px;
+                                    border-right: 4px solid rgb(69, 69, 69) !important;">
+                                        <i class="fa fa-duotone fa-envelope"></i>
+                                    </span>
                                 </div>
 
                                 <input id="email" type="email"
-                                    class="form-control @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+                                    class="text-white border-0 form-control @error('email') is-invalid @enderror" name="email"
+                                    value="{{ old('email') }}" required autocomplete="email" placeholder="Email" style="background-color: #2b2b2b;">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -131,12 +138,16 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                    <span class="text-white border-0 input-group-text" style="
+                                    background-color: #2b2b2b;
+                                    border-right: 4px solid rgb(69, 69, 69) !important;">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
                                 </div>
 
                                 <input id="password" type="password"
-                                    class="form-control @error('password') is-invalid @enderror" name="password" required
-                                    autocomplete="new-password" placeholder="Password">
+                                    class="text-white border-0 form-control @error('password') is-invalid @enderror" name="password" required
+                                    autocomplete="new-password" placeholder="Password" style="background-color: #2b2b2b;">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -147,12 +158,16 @@
 
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                                    <span class="text-white border-0 input-group-text" style="
+                                    background-color: #2b2b2b;
+                                    border-right: 4px solid rgb(69, 69, 69) !important;">
+                                        <i class="fa fa-lock"></i>
+                                    </span>
                                 </div>
 
-                                <input id="password-confirm" type="password" class="form-control"
+                                <input id="password-confirm" type="password" class="text-white border-0 form-control"
                                     name="password_confirmation" required autocomplete="new-password"
-                                    placeholder="Confirm Password">
+                                    placeholder="Confirm Password" style="background-color: #2b2b2b;">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -163,8 +178,8 @@
 
 
 
-                            <button type="submit" class="btn border-0 mt-2"
-                                style="width: 100%; background-color: #7f8389; color: black;">
+                            <button type="submit" class="text-white btn border-0 mt-2"
+                                style="width: 100%; background-color: #7f8389;">
                                 Sign Up
                             </button>
                             <a href="{{ route('login') }}" class="mt-2 btn btn-outline-secondary"
