@@ -134,8 +134,6 @@
                   allowfullscreen></iframe>
             </div>
 
-            {{-- <img src="{{ $pcgame->thumbnail_url }}" class="img-fluid rounded w-100" alt="..."> --}}
-
             <div class="owl-carousel screenshot-carousel mt-4">
                 <div class="item">
                     <a href="{{ $pcgame->thumbnail_url }}" data-lightbox="carousel">
