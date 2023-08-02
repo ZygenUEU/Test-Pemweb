@@ -2,6 +2,7 @@
 
 return [
     'actions'                        => 'Actions',
+    'notif_delete_idn'               => 'Apakah anda yakin ingin menhapusnya?',
     'add'                            => 'Add',
     'allRightsReserved'              => 'All rights reserved.',
     'areYouSure'                     => 'Are you sure?',

@@ -204,7 +204,7 @@
                         <br>
 
                         @can('pcgame_edit')
-                            @if ($pcgame->postedby === Auth::user()->name || Auth::user()->name === 'Admin')
+                            @if ($pcgame->postedby === Auth::user()->name || Gate::check('permission_edit'))
                                 <a class="w-100 btn btn-info mt-3" href="{{ route('admin.pcgames.edit', $pcgame->id) }}">
                                     {{ trans('global.edit') }}
                                 </a>
@@ -215,14 +215,14 @@
 
                         @can('pcgame_delete')
                             <form action="{{ route('admin.pcgames.destroy', $pcgame->id) }}" method="POST"
-                                onsubmit="return confirm('{{ trans('global.areYouSure') }}');" style="display: inline-block;"
+                                onsubmit="return confirm('{{ trans('global.notif_delete_idn') }}');" style="display: inline-block;"
                                 class="w-100">
 
                                 <input type="hidden" name="_method" value="DELETE">
                                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 {{-- <input type="submit" class="w-100 btn btn-danger mt-3" value="{{ trans('global.delete') }}"> --}}
 
-                                @if ($pcgame->postedby === Auth::user()->name || Auth::user()->name === 'Admin')
+                                @if ($pcgame->postedby === Auth::user()->name || Gate::check('permission_delete'))
                                     <input type="submit" class="w-100 btn btn-danger mt-3"
                                         value="{{ trans('global.delete') }}">
                                 @endif
